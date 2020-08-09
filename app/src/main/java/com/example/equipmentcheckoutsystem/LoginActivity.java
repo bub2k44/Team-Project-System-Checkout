@@ -49,8 +49,8 @@ public class LoginActivity extends AppCompatActivity
 
                 if(res == true)
                 {
-                    Intent HomePage = new Intent(LoginActivity.this, HomeActivity.class);
-                    startActivity(HomePage);
+                    Intent checkOut = new Intent(LoginActivity.this, CheckOutActivity.class);
+                    startActivity(checkOut);
                 }
                 else
                 {

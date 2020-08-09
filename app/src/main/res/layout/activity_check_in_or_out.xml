@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/images"
+    android:layout_gravity="center"
+    tools:context=".CheckInOrOutActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@drawable/smileyfacestudios"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/button_checkOut"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_2"
+            android:textColor="#0A0A0A"
+            android:text="Check Out"/>
+
+        <Button
+            android:id="@+id/button_checkIn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_2"
+            android:textColor="#0A0A0A"
+            android:text="Check In"/>
+
+        <Button
+            android:id="@+id/button_receipt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_2"
+            android:textColor="#0A0A0A"
+            android:text="Print Receipt"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
