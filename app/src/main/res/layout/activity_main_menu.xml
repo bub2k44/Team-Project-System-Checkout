@@ -7,13 +7,22 @@
     android:orientation="vertical"
     android:background="@drawable/images"
     android:layout_gravity="center"
-    tools:context=".CheckInOrOutActivity">
+    tools:context=".MainMenuActivity">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_marginTop="150dp"
         app:srcCompat="@drawable/smileyfacestudios"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="Main Menu"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -25,7 +34,7 @@
         <Button
             android:id="@+id/button_checkOut"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
             android:layout_margin="10dp"
             android:background="@drawable/button_2"
@@ -35,7 +44,7 @@
         <Button
             android:id="@+id/button_checkIn"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
             android:layout_margin="10dp"
             android:background="@drawable/button_2"
@@ -43,14 +52,34 @@
             android:text="Check In"/>
 
         <Button
-            android:id="@+id/button_receipt"
+            android:id="@+id/button_print_receipt"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
             android:layout_margin="10dp"
             android:background="@drawable/button_2"
             android:textColor="#0A0A0A"
             android:text="Print Receipt"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/button_log_out"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_2"
+            android:textColor="#0A0A0A"
+            android:text="Log Out"/>
+
     </LinearLayout>
 
 

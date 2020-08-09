@@ -39,9 +39,9 @@
         android:drawableLeft="@drawable/login"
         android:hint="@string/password"/>
     <Button
-        android:id="@+id/button_report"
-        android:layout_width="210dp"
-        android:layout_height="40dp"
+        android:id="@+id/button_login"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_2"
         android:textColor="#0A0A0A"
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="35dp"

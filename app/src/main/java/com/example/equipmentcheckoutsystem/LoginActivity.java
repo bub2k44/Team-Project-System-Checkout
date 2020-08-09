@@ -11,11 +11,12 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity
 {
+    DatabaseHelper db;
+
     EditText mTextUsername;
     EditText mTextPassword;
     Button mButtonLogin;
     TextView mTextViewRegister;
-    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,6 +29,7 @@ public class LoginActivity extends AppCompatActivity
         mTextPassword = findViewById(R.id.edittext_password);
         mButtonLogin = findViewById(R.id.button_login);
         mTextViewRegister = findViewById(R.id.textview_register);
+
         mTextViewRegister.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -49,8 +51,8 @@ public class LoginActivity extends AppCompatActivity
 
                 if(res == true)
                 {
-                    Intent checkOut = new Intent(LoginActivity.this, CheckOutActivity.class);
-                    startActivity(checkOut);
+                    Intent menu = new Intent(LoginActivity.this, MainMenuActivity.class);
+                    startActivity(menu);
                 }
                 else
                 {
