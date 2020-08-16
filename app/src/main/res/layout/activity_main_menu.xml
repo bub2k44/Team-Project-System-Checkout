@@ -78,7 +78,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/button_2"
             android:textColor="#0A0A0A"
-            android:text="My Receipt"/>
+            android:text="Report"/>
 
     </LinearLayout>
 

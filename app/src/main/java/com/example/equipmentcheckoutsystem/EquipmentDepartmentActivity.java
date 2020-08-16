@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -18,7 +19,9 @@ import java.util.ArrayList;
 
 public class EquipmentDepartmentActivity extends AppCompatActivity
 {
-    private String powerDrillQty = "";
+    DatabaseHelper2 myDB;
+
+    public String powerDrillQty = "";
     private String skillSawQty = "";
     private String tapeMeasureQty = "";
     private String hammerQty = "";
@@ -39,6 +42,12 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
     CheckBox ch_1, ch_2, ch_3, ch_4, ch_5, ch_6, ch_7, ch_8;
 
     Button b_1, b_2;
+    Button main;
+
+    public void AddData(String newEntry)
+    {
+        boolean insertData = myDB.addData(newEntry);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -59,6 +68,9 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
 
         b_1 = findViewById(R.id.btn1);
         b_2 = findViewById(R.id.btn2);
+        main = findViewById(R.id.btn_main_menu);
+
+        myDB = new DatabaseHelper2(this);
 
         b_1.setOnClickListener(new View.OnClickListener()
         {
@@ -83,6 +95,16 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
 
                 ed_1.setText(String.valueOf(sum));
             }
+        });
+
+        main.setOnClickListener(new View.OnClickListener()
+        {
+           @Override
+           public void onClick(View v)
+           {
+               Intent main = new Intent(EquipmentDepartmentActivity.this, MainMenuActivity.class);
+               startActivity(main);
+           }
         });
     }
 
@@ -128,6 +150,8 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        AddData(pName);
                     }
 
                     row.addView(t1);
@@ -189,6 +213,8 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        AddData(pName);
                     }
 
                     row.addView(t1);
@@ -250,6 +276,8 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        AddData(pName);
                     }
 
                     row.addView(t1);
@@ -312,6 +340,8 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        AddData(pName);
                     }
 
                     row.addView(t1);
@@ -374,6 +404,8 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        AddData(pName);
                     }
 
                     row.addView(t1);
@@ -436,6 +468,8 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        AddData(pName);
                     }
 
                     row.addView(t1);
@@ -498,6 +532,8 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        AddData(pName);
                     }
 
                     row.addView(t1);
@@ -560,6 +596,8 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        AddData(pName);
                     }
 
                     row.addView(t1);

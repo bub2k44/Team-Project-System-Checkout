@@ -47,15 +47,15 @@ public class MainMenuActivity extends AppCompatActivity
             }
         });
 
-//        mButtonReceipt.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                Intent receipt = new Intent(MainMenuActivity.this, PrintReceiptActivity.class);
-//                startActivity(receipt);
-//            }
-//        });
+        mButtonReceipt.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent receipt = new Intent(MainMenuActivity.this, ReportActivity.class);
+                startActivity(receipt);
+            }
+        });
 
         mButtonLogOut.setOnClickListener(new View.OnClickListener()
         {
