@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         app:srcCompat="@drawable/smileyfacestudios"/>
 
     <TextView
@@ -25,24 +25,43 @@
         android:text="Main Menu"/>
 
     <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+
+    <Button
+        android:id="@+id/button_equipment"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_2"
+        android:textColor="#0A0A0A"
+        android:text="Equipment"/>
+
+    <Button
+        android:id="@+id/button_materials"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_2"
+        android:textColor="#0A0A0A"
+        android:text="Materials"/>
+
+</LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/button_checkOut"
-            android:layout_width="100dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="20dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_2"
-            android:textColor="#0A0A0A"
-            android:text="Check Out"/>
-
-        <Button
-            android:id="@+id/button_checkIn"
+            android:id="@+id/button_check_in"
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:layout_marginTop="20dp"
@@ -59,14 +78,14 @@
             android:layout_margin="10dp"
             android:background="@drawable/button_2"
             android:textColor="#0A0A0A"
-            android:text="Print Receipt"/>
+            android:text="My Receipt"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:layout_gravity="center">
 

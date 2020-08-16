@@ -9,7 +9,8 @@ import android.widget.Button;
 
 public class MainMenuActivity extends AppCompatActivity
 {
-    Button mButtonCheckOut;
+    Button mButtonEquipment;
+    Button mButtonMaterials;
     Button mButtonCheckIn;
     Button mButtonReceipt;
     Button mButtonLogOut;
@@ -20,28 +21,29 @@ public class MainMenuActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        mButtonCheckOut = findViewById(R.id.button_checkOut);
-        mButtonCheckIn = findViewById(R.id.button_checkIn);
+        mButtonEquipment = findViewById(R.id.button_equipment);
+        mButtonMaterials = findViewById(R.id.button_materials);
+        mButtonCheckIn = findViewById(R.id.button_check_in);
         mButtonReceipt = findViewById(R.id.button_print_receipt);
         mButtonLogOut = findViewById(R.id.button_log_out);
 
-        mButtonCheckOut.setOnClickListener(new View.OnClickListener()
+        mButtonEquipment.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                Intent checkOut = new Intent(MainMenuActivity.this, CheckOutActivity.class);
-                startActivity(checkOut);
+                Intent equipment = new Intent(MainMenuActivity.this, EquipmentDepartmentActivity.class);
+                startActivity(equipment);
             }
         });
 
-        mButtonCheckIn.setOnClickListener(new View.OnClickListener()
+        mButtonMaterials.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                Intent checkIn = new Intent(MainMenuActivity.this, CheckInActivity.class);
-                startActivity(checkIn);
+                Intent materials = new Intent(MainMenuActivity.this, MaterialsDepartmentActivity.class);
+                startActivity(materials);
             }
         });
 
