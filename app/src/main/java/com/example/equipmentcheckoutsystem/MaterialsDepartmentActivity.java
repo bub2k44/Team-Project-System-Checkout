@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -18,6 +19,8 @@ import java.util.ArrayList;
 
 public class MaterialsDepartmentActivity extends AppCompatActivity
 {
+    DatabaseHelper2 myDB;
+
     private String pineWoodQty = "";
     private String nailsQty = "";
     private String screwsQty = "";
@@ -39,6 +42,12 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
     CheckBox ch_1, ch_2, ch_3, ch_4, ch_5, ch_6, ch_7, ch_8;
 
     Button b_1, b_2;
+    Button main;
+
+    public void AddData(String newEntry1, String newEntry2, String newEntry3)
+    {
+        boolean insertData = myDB.addData(newEntry1, newEntry2, newEntry3);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -59,6 +68,7 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
 
         b_1 = findViewById(R.id.btn1);
         b_2 = findViewById(R.id.btn2);
+        main = findViewById(R.id.btn_main_menu);
 
         b_1.setOnClickListener(new View.OnClickListener()
         {
@@ -82,6 +92,16 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                 }
 
                 ed_1.setText(String.valueOf(sum));
+            }
+        });
+
+        main.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent main = new Intent(MaterialsDepartmentActivity.this, MainMenuActivity.class);
+                startActivity(main);
             }
         });
     }
@@ -128,6 +148,8 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        //AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -189,6 +211,8 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        //AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -250,6 +274,8 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        //AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -312,6 +338,8 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        //AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -374,6 +402,8 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        //AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -436,6 +466,8 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        //AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -498,6 +530,8 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        //AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -560,6 +594,8 @@ public class MaterialsDepartmentActivity extends AppCompatActivity
                         t2.setText(prc);
                         t3.setText(qty);
                         t4.setText(total);
+
+                        //AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);

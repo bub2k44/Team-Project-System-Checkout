@@ -44,9 +44,9 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
     Button b_1, b_2;
     Button main;
 
-    public void AddData(String newEntry)
+    public void AddData(String newEntry1, String newEntry2, String newEntry3)
     {
-        boolean insertData = myDB.addData(newEntry);
+        boolean insertData = myDB.addData(newEntry1, newEntry2, newEntry3);
     }
 
     @Override
@@ -151,7 +151,7 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t3.setText(qty);
                         t4.setText(total);
 
-                        AddData(pName);
+                        AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -214,7 +214,7 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t3.setText(qty);
                         t4.setText(total);
 
-                        AddData(pName);
+                        AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -277,7 +277,7 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t3.setText(qty);
                         t4.setText(total);
 
-                        AddData(pName);
+                        AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -341,7 +341,7 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t3.setText(qty);
                         t4.setText(total);
 
-                        AddData(pName);
+                        AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -405,7 +405,7 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t3.setText(qty);
                         t4.setText(total);
 
-                        AddData(pName);
+                        AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -469,7 +469,7 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t3.setText(qty);
                         t4.setText(total);
 
-                        AddData(pName);
+                        AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -533,7 +533,7 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t3.setText(qty);
                         t4.setText(total);
 
-                        AddData(pName);
+                        AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
@@ -597,7 +597,7 @@ public class EquipmentDepartmentActivity extends AppCompatActivity
                         t3.setText(qty);
                         t4.setText(total);
 
-                        AddData(pName);
+                        AddData(pName, prc, qty);
                     }
 
                     row.addView(t1);
